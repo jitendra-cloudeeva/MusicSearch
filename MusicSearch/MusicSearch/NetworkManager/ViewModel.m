@@ -10,6 +10,8 @@
 #import "ViewModel.h"
 #import "AFNetworking.h"
 #import "Track.h"
+#import "XMLDictionary.h"
+#import "TrackDetail.h"
 
 @implementation ViewModel
 
@@ -74,18 +76,19 @@
     
     NSMutableArray *dataSourceArray = [[NSMutableArray alloc] init];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    //manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFXMLParserResponseSerializer serializer];
     
     [manager GET:urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseData) {
         if (responseData) {
-            NSArray *dataArray = (NSArray *)responseData[@"song"];
             
-            for (NSDictionary *dict in dataArray) {
-                Track *track = [[Track alloc] initWithDict:dict];
-                [dataSourceArray addObject:track];
+            // using xml parser since response was not formatted as json
+            NSDictionary *dataArray = [[XMLDictionaryParser sharedInstance] dictionaryWithParser:responseData];
+            
+            TrackDetail *track = [[TrackDetail alloc] initWithDict:dataArray];
+            [dataSourceArray addObject:track];
                 
-            }
+            
             completionBlock([dataSourceArray mutableCopy]);
             
         }

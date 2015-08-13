@@ -10,31 +10,31 @@
 	<string>MusicSearch</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>667D4104A243CA551B66AFD70E31C7DFF98645DB</key>
-		<string>https://github.com/varunreddy1800/MyCards.git</string>
+		<key>A67B59D9797A071B96DBD018D12ED0F50AB148FF</key>
+		<string>https://github.com/jitendra-cloudeeva/MusicSearch.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MyCards/MusicSearch.xcodeproj</string>
+	<string>MusicSearch/MusicSearch.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>667D4104A243CA551B66AFD70E31C7DFF98645DB</key>
+		<key>A67B59D9797A071B96DBD018D12ED0F50AB148FF</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/varunreddy1800/MyCards.git</string>
+	<string>https://github.com/jitendra-cloudeeva/MusicSearch.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>667D4104A243CA551B66AFD70E31C7DFF98645DB</string>
+	<string>A67B59D9797A071B96DBD018D12ED0F50AB148FF</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>667D4104A243CA551B66AFD70E31C7DFF98645DB</string>
+			<string>A67B59D9797A071B96DBD018D12ED0F50AB148FF</string>
 			<key>IDESourceControlWCCName</key>
-			<string>MyCards</string>
+			<string>MusicSearch</string>
 		</dict>
 	</array>
 </dict>

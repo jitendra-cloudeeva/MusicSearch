@@ -10,7 +10,7 @@
 #import "Track.h"
 
 @interface TrackCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imgAlbumURL;
+@property (weak, nonatomic) IBOutlet UIImageView *imgAlbum;
 @property (weak, nonatomic) IBOutlet UILabel *lblTrackName;
 @property (weak, nonatomic) IBOutlet UILabel *lblArtistName;
 @property (weak, nonatomic) IBOutlet UILabel *lblAlbumName;

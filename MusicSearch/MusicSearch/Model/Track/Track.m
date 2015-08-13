@@ -18,7 +18,6 @@
         self.artistName = dict[@"artistName"];
         self.albumImageURL = dict[@"artworkUrl100"];
         self.collectionName = dict[@"collectionName"];
-        self.lyrics = dict[@"lyrics"];
 
     }
     return self;

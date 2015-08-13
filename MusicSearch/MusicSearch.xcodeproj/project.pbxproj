@@ -11,6 +11,7 @@
 		6F4F59781B7C1DA100CFA347 /* Track.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4F59761B7C1DA100CFA347 /* Track.m */; };
 		6F4F597B1B7C1DC200CFA347 /* TrackDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4F59791B7C1DC200CFA347 /* TrackDetailVC.m */; };
 		6F4F597E1B7C1E1D00CFA347 /* TrackDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4F597C1B7C1E1D00CFA347 /* TrackDetail.m */; };
+		6F4F59811B7C4F4F00CFA347 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4F59801B7C4F4F00CFA347 /* XMLDictionary.m */; };
 		8BBA45881B691A4A00B065E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA45871B691A4A00B065E1 /* main.m */; };
 		8BBA458B1B691A4A00B065E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA458A1B691A4A00B065E1 /* AppDelegate.m */; };
 		8BBA458E1B691A4A00B065E1 /* MusicSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA458C1B691A4A00B065E1 /* MusicSearch.xcdatamodeld */; };
@@ -58,6 +59,8 @@
 		6F4F597A1B7C1DC200CFA347 /* TrackDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackDetailVC.h; path = TrackDetailVC/TrackDetailVC.h; sourceTree = "<group>"; };
 		6F4F597C1B7C1E1D00CFA347 /* TrackDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrackDetail.m; path = TrackDetail/TrackDetail.m; sourceTree = "<group>"; };
 		6F4F597D1B7C1E1D00CFA347 /* TrackDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrackDetail.h; path = TrackDetail/TrackDetail.h; sourceTree = "<group>"; };
+		6F4F597F1B7C4F4F00CFA347 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		6F4F59801B7C4F4F00CFA347 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
 		8BBA45821B691A4A00B065E1 /* MusicSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBA45861B691A4A00B065E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BBA45871B691A4A00B065E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 		8BBA45841B691A4A00B065E1 /* MusicSearch */ = {
 			isa = PBXGroup;
 			children = (
+				6F4F597F1B7C4F4F00CFA347 /* XMLDictionary.h */,
+				6F4F59801B7C4F4F00CFA347 /* XMLDictionary.m */,
 				8BBA460B1B69383E00B065E1 /* UIKit+AFNetworking */,
 				8BBA45EE1B69381300B065E1 /* AFNetworking */,
 				8BBA45891B691A4A00B065E1 /* AppDelegate.h */,
@@ -410,6 +415,7 @@
 				8BBA46031B69383600B065E1 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				8BBA45E61B69380B00B065E1 /* AFHTTPRequestOperationManager.m in Sources */,
 				6F4F597B1B7C1DC200CFA347 /* TrackDetailVC.m in Sources */,
+				6F4F59811B7C4F4F00CFA347 /* XMLDictionary.m in Sources */,
 				8BBA46061B69383600B065E1 /* UIButton+AFNetworking.m in Sources */,
 				8BBA46041B69383600B065E1 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				8BBA45B51B691D0200B065E1 /* TrackListVC.m in Sources */,

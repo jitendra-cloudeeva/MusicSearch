@@ -1,9 +1,9 @@
 //
 //  main.m
-//  MyCards
+//  MusicSearch
 //
-//  Created by varun reddy on 7/29/15.
-//  Copyright (c) 2015 varun reddy. All rights reserved.
+//  Created by jitendra rajoria on 8/12/15.
+//  Copyright (c) 2015 jitendra rajoria. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

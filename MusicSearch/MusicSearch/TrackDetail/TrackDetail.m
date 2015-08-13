@@ -10,4 +10,15 @@
 
 @implementation TrackDetail
 
+-(instancetype)initWithDict:(NSDictionary *)dict{
+    
+    self = [super init];
+    if (self) {
+        self.artist = dict[@"artist"];
+        self.song = dict[@"song"];
+        self.lyrics = dict[@"lyrics"];
+    }
+    return self;
+}
+
 @end

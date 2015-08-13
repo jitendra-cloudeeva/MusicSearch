@@ -11,6 +11,7 @@
 
 @interface TrackDetailVC : UIViewController
 
+@property(nonatomic,strong)UIImageView *imgAlbum;
 @property(nonatomic,strong)Track *track;
 -(void)setTrackDeatils:(Track*)track;
 

@@ -10,4 +10,10 @@
 
 @interface TrackDetail : NSObject
 
+@property (nonatomic, strong) NSString *artist;
+@property (nonatomic, strong) NSString *song;
+@property (nonatomic, strong) NSString *lyrics;
+
+-(instancetype)initWithDict:(NSDictionary *)dict;
+
 @end

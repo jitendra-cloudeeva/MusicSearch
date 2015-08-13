@@ -10,13 +10,15 @@
 
 #import "TrackDetailVC.h"
 #import "ViewModel.h"
+#import "TrackDetail.h"
+#import "UIKit+AFNetworking.h"
 
 @interface TrackDetailVC ()
-@property (weak, nonatomic) IBOutlet UIImageView *imgAlbum;
+@property (weak, nonatomic) IBOutlet UIImageView *imgViewAlbum;
 @property (weak, nonatomic) IBOutlet UILabel *lblTrackName;
 @property (weak, nonatomic) IBOutlet UILabel *lblArtistName;
 @property (weak, nonatomic) IBOutlet UILabel *lblAlbumName;
-@property (weak, nonatomic) IBOutlet UILabel *lblLyrics;
+@property (weak, nonatomic) IBOutlet UIWebView *lblLyrics;
 
 @end
 
@@ -29,6 +31,7 @@
 @implementation TrackDetailVC
 
 @synthesize track;
+@synthesize imgAlbum;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,6 +41,21 @@
     _lblArtistName.text = track.artistName;
     _lblAlbumName.text = track.collectionName;
     
+    NSURL *url = [NSURL URLWithString:track.albumImageURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    UIImage *placeholderImage = [UIImage imageNamed:@"placeholder"];
+    
+    __weak TrackDetailVC *weakSelf = self;
+    
+    [self.imgViewAlbum setImageWithURLRequest:request
+                         placeholderImage:placeholderImage
+                                  success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                      
+                                      weakSelf.imgViewAlbum.image = image;
+                                      [weakSelf.view setNeedsLayout];
+                                      
+                                  } failure:nil];
+    
     self.navigationItem.title = _lblTrackName.text;
     
     [self getSongLyrics];
@@ -45,12 +63,22 @@
 
 -(void)getSongLyrics
 {
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(135,140,100,100)];
+    spinner.color = [UIColor blueColor];
+    [spinner startAnimating];
+    [self.view addSubview:spinner];
+    [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
     __weak TrackDetailVC *weakSelf = self;
     NSString *url = [NSString stringWithFormat:@"%@artist=%@&song=%@&fmt=xml",DETAILS_URL,_lblArtistName.text,_lblTrackName.text];
     url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[ViewModel sharedManager] getTrackDetailWithURL:url withCompletionBlock:^(id response) {
         weakSelf.dataSourceArray = (NSArray *)response;
-        //weakSelf.lblLyrics.text =
+        TrackDetail *trackDetails = (TrackDetail*)weakSelf.dataSourceArray[0];
+        [weakSelf.lblLyrics loadHTMLString:trackDetails.lyrics baseURL:nil];
+        
+        [spinner removeFromSuperview];
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     }];
 }
 

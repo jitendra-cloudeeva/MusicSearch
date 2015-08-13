@@ -14,18 +14,23 @@
 -(void)setDataWithTrack:(Track *)track{
     
     self.lblTrackName.text = track.trackName;
-    self.lblTrackName.numberOfLines = 0;
-    [self.lblTrackName sizeToFit];
-    
     self.lblArtistName.text = track.artistName;
-    self.lblArtistName.numberOfLines = 0;
-    [self.lblArtistName sizeToFit];
-    
     self.lblAlbumName.text = track.collectionName;
-    self.lblAlbumName.numberOfLines = 0;
-    [self.lblAlbumName sizeToFit];
     
-    [self.imageView setImageWithURL:[NSURL URLWithString:track.albumImageURL]];
+    NSURL *url = [NSURL URLWithString:track.albumImageURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    UIImage *placeholderImage = [UIImage imageNamed:@"placeholder"];
+    
+    __weak TrackCell *weakCell = self;
+    
+    [self.imgAlbum setImageWithURLRequest:request
+                          placeholderImage:placeholderImage
+                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                       
+                                       weakCell.imgAlbum.image = image;
+                                       [weakCell setNeedsLayout];
+                                       
+                                   } failure:nil];
 }
 
 -(void)prepareForReuse{
@@ -34,4 +39,5 @@
     self.lblArtistName.text = @"";
     self.lblAlbumName.text = @"";
 }
+
 @end

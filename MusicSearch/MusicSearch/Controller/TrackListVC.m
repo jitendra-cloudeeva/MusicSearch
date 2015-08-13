@@ -31,6 +31,7 @@
     searchBar.delegate = self;
     
     self.navigationItem.title = @"Search Music";
+    self.navigationController.navigationBar.barTintColor = [UIColor lightGrayColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,26 +75,17 @@
     return self.dataSourceArray.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 102;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TrackCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuse_ID" forIndexPath:indexPath];
     Track *track = self.dataSourceArray[indexPath.row];
     [cell setDataWithTrack:track];
     
-    NSURL *url = [NSURL URLWithString:track.albumImageURL];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    UIImage *placeholderImage = [UIImage imageNamed:@"placeholder"];
     
-    __weak UITableViewCell *weakCell = cell;
-    
-    [cell.imageView setImageWithURLRequest:request
-                          placeholderImage:placeholderImage
-                                   success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-                                       
-                                       weakCell.imageView.image = image;
-                                       [weakCell setNeedsLayout];
-                                       
-                                   } failure:nil];
     
     return cell;
 }

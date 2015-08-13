@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSString *artistName;
 @property (nonatomic, strong) NSString *albumImageURL;
 @property (nonatomic, strong) NSString *collectionName;
-@property (nonatomic, strong) NSString *lyrics;
 
 -(instancetype)initWithDict:(NSDictionary *)dict;
 @end
