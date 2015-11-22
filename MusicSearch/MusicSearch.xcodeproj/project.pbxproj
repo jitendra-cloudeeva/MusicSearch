@@ -14,7 +14,6 @@
 		6F4F59811B7C4F4F00CFA347 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4F59801B7C4F4F00CFA347 /* XMLDictionary.m */; };
 		8BBA45881B691A4A00B065E1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA45871B691A4A00B065E1 /* main.m */; };
 		8BBA458B1B691A4A00B065E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA458A1B691A4A00B065E1 /* AppDelegate.m */; };
-		8BBA458E1B691A4A00B065E1 /* MusicSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8BBA458C1B691A4A00B065E1 /* MusicSearch.xcdatamodeld */; };
 		8BBA45941B691A4A00B065E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA45921B691A4A00B065E1 /* Main.storyboard */; };
 		8BBA45961B691A4A00B065E1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA45951B691A4A00B065E1 /* Images.xcassets */; };
 		8BBA45991B691A4A00B065E1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BBA45971B691A4A00B065E1 /* LaunchScreen.xib */; };
@@ -66,7 +65,6 @@
 		8BBA45871B691A4A00B065E1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BBA45891B691A4A00B065E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8BBA458A1B691A4A00B065E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8BBA458D1B691A4A00B065E1 /* MusicSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicSearch.xcdatamodel; sourceTree = "<group>"; };
 		8BBA45931B691A4A00B065E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BBA45951B691A4A00B065E1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8BBA45981B691A4A00B065E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				8BBA45921B691A4A00B065E1 /* Main.storyboard */,
 				8BBA45951B691A4A00B065E1 /* Images.xcassets */,
 				8BBA45971B691A4A00B065E1 /* LaunchScreen.xib */,
-				8BBA458C1B691A4A00B065E1 /* MusicSearch.xcdatamodeld */,
 				8BBA45851B691A4A00B065E1 /* Supporting Files */,
 			);
 			path = MusicSearch;
@@ -426,7 +423,6 @@
 				8BBA45ED1B69380B00B065E1 /* AFURLSessionManager.m in Sources */,
 				6F4F597E1B7C1E1D00CFA347 /* TrackDetail.m in Sources */,
 				8BBA45EC1B69380B00B065E1 /* AFURLResponseSerialization.m in Sources */,
-				8BBA458E1B691A4A00B065E1 /* MusicSearch.xcdatamodeld in Sources */,
 				8BBA45EB1B69380B00B065E1 /* AFURLRequestSerialization.m in Sources */,
 				8BBA46091B69383600B065E1 /* UIRefreshControl+AFNetworking.m in Sources */,
 				8BBA46071B69383600B065E1 /* UIImageView+AFNetworking.m in Sources */,
@@ -642,19 +638,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8BBA458C1B691A4A00B065E1 /* MusicSearch.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8BBA458D1B691A4A00B065E1 /* MusicSearch.xcdatamodel */,
-			);
-			currentVersion = 8BBA458D1B691A4A00B065E1 /* MusicSearch.xcdatamodel */;
-			path = MusicSearch.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 8BBA457A1B691A4A00B065E1 /* Project object */;
 }
